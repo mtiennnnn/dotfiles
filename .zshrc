@@ -72,6 +72,9 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
    git
+   zsh-autosuggestions
+   zsh-syntax-highlighting
+   zsh-completions
    history-substring-search
 )
 
@@ -120,8 +123,18 @@ _zsh_autosuggest_enable() {
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias lapce="/home/mtiennnnn/Downloads/Lapce/lapce"
 
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus-daemon -drx
+# pnpm
+export PNPM_HOME="/home/mtiennnnn/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm endsource /usr/share/nvm/init-nvm.sh
+source /usr/share/nvm/init-nvm.sh
+# 
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=cyan,underline
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=cyan,underline
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=cyan
